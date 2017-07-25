@@ -67,51 +67,22 @@ def makeWebhookResult(req):
         "displayText": speech,
         "data" :
             {
-              "facebook": {
-                "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "template_type": "list",
-                    "top_element_style": "compact",
-                    "elements": [
-                      {
-                        "title": "Classic T-Shirt Collection",
-                        "image_url": "https://xvir.github.io/img/apiai.png",
-                        "subtitle": "See all our colors",
-                        "default_action": {
-                          "type": "web_url",
-                          "url": "https://xvir.github.io/"
-
-                        },
-                        "buttons": [
-                          {
-                            "title": "View",
-                            "type": "web_url",
-                            "url": "https://xvir.github.io/"
-                          }
-                        ]
-                      },
-                      {
-                        "title": "Classic T-Shirt Collection",
-                        "image_url": "https://xvir.github.io/img/apiai.png",
-                        "subtitle": "See all our colors",
-                        "default_action": {
-                          "type": "web_url",
-                          "url": "http://xvir.github.io/"
-                        },
-                        "buttons": [
-                          {
-                            "title": "View",
-                            "type": "web_url",
-                            "url": "https://xvir.github.io/"
-                          }
-                        ]
-                      }
-                    ]
-                  }
+                "facebook" : {
+                    "attachment" : {
+                        "type" : "template",
+                        "payload" : {
+                            "template_type" : "generic",
+                           "elements" : [
+                                {
+                                    "title" : tituloAtractivo,
+                                    "image_url" : imagenAtractivo,
+                                    "subtitle": descripcionAtractivo,
+                                }
+                           ]
+                       }
+                    }
                 }
-              }
-            }
+            },
 #       "contextOut": [{"name":"desdepython", "lifespan":2, "parameters":{"slug":urlAtractivo}}],
         "source": "apiai-situr3"
     }
