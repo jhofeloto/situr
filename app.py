@@ -67,24 +67,22 @@ def makeWebhookResult(req):
         "displayText": speech,
         "data" : {
             "facebook" : {
-              "attachment": {
-                  "attachment" : {
-                      "type" : "template",
-                      "payload" : {
-                          "template_type" : "generic",
-                         "elements" : [
-                              {
-                                  "title" : tituloAtractivo,
-                                  "image_url" : imagenAtractivo,
-                                  "subtitle": descripcionAtractivo,
-                              }
-                         ]
-                     }
-                  }
-              }
+                "attachment" : {
+                    "type" : "template",
+                    "payload" : {
+                        "template_type" : "generic",
+                       "elements" : [
+                            {
+                                "title" : tituloAtractivo,
+                                "image_url" : imagenAtractivo,
+                                "subtitle": descripcionAtractivo,
+                            }
+                       ]
+                   }
+                }
             }
         },
- #       "contextOut": [{"name":"desdepython", "lifespan":2, "parameters":{"slug":urlAtractivo}}],
+#       "contextOut": [{"name":"desdepython", "lifespan":2, "parameters":{"slug":urlAtractivo}}],
         "source": "apiai-situr3"
     }
 
