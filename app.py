@@ -57,7 +57,7 @@ def makeWebhookResult(req):
     leerImagenAtr = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo).read())
     imagenAtractivo = leerImagenAtr['media_details']['sizes']['medium']['source_url']
 
-    speech = "El atractivo que solicitaste es: " + tituloAtractivo + "     y su descripción es   " + descripcionAtractivo + "    y la url de la imagen es: " + imagenAtractivo
+    speech = "El atractivo: " + tituloAtractivo + "descripción:" + descripcionAtractivo + "    y la url de la imagen es: " + imagenAtractivo
 
     print("Response:")
     print(speech)
@@ -73,28 +73,10 @@ def makeWebhookResult(req):
                         "template_type" : "generic",
                        "elements" : [
                             {
-                             "title" : tituloAtractivo,
-                             "image_url" : imagenAtractivo,
-                             "subtitle": descripcionAtractivo,
-                             "default_action": {
-                               "type": "web_url",
-                               "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
-                               "messenger_extensions": true,
-                               "webview_height_ratio": "tall",
-                               "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                             },
-                             "buttons":[
-                               {
-                                 "type":"web_url",
-                                 "url":"https://petersfancybrownhats.com",
-                                 "title":"View Website"
-                               },{
-                                 "type":"postback",
-                                 "title":"Start Chatting",
-                                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                               }
-                             ]
-                           }
+                                "title" : tituloAtractivo,
+                                "image_url" : imagenAtractivo,
+                                "subtitle": descripcionAtractivo,
+                            }
                        ]
                    }
                 }
