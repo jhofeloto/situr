@@ -77,6 +77,7 @@ def makeWebhookResult(req):
                                     "title" : tituloAtractivo,
                                     "image_url" : imagenAtractivo,
                                     "subtitle": descripcionAtractivo,
+                                    "buttons": "Ver",
                                 }
                            ]
                        }
