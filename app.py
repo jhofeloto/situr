@@ -57,7 +57,7 @@ def makeWebhookResult(req):
     leerImagenAtr = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo).read())
     imagenAtractivo = leerImagenAtr['media_details']['sizes']['medium']['source_url']
 
-    speech = "El atractivo: " + tituloAtractivo + "descripción:" + descripcionAtractivo + "    y la url de la imagen es: " + imagenAtractivo
+    speech = "El atractivo: " + tituloAtractivo + ". Descripción:" + descripcionAtractivo + "    y la url de la imagen es: " + imagenAtractivo
 
     print("Response:")
     print(speech)
@@ -76,6 +76,13 @@ def makeWebhookResult(req):
                                 "title" : tituloAtractivo,
                                 "image_url" : imagenAtractivo,
                                 "subtitle": descripcionAtractivo,
+                                "buttons": [
+                                {
+                                    "type": "web_url",
+                                    "url": "http:situr.boyaca.gov.co",
+                                    "title": "Ver detalles"
+                                }
+                                ]
                             }
                        ]
                    }
