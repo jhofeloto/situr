@@ -73,9 +73,28 @@ def makeWebhookResult(req):
                         "template_type" : "generic",
                        "elements" : [
                             {
-                                "title" : tituloAtractivo,
-                                "image_url" : imagenAtractivo,
-                                "subtitle": descripcionAtractivo,                            }
+                             "title" : tituloAtractivo,
+                             "image_url" : imagenAtractivo,
+                             "subtitle": descripcionAtractivo,
+                             "default_action": {
+                               "type": "web_url",
+                               "url": "https://peterssendreceiveapp.ngrok.io/view?item=103",
+                               "messenger_extensions": true,
+                               "webview_height_ratio": "tall",
+                               "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                             },
+                             "buttons":[
+                               {
+                                 "type":"web_url",
+                                 "url":"https://petersfancybrownhats.com",
+                                 "title":"View Website"
+                               },{
+                                 "type":"postback",
+                                 "title":"Start Chatting",
+                                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                               }
+                             ]
+                           }
                        ]
                    }
                 }
