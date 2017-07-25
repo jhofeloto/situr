@@ -84,8 +84,8 @@ def makeWebhookResult(req):
                                 "title":"Ver website"
                                 }
                             ]
-                       }
-                   ]
+                       ]
+                   }
                 }
             }
         },
