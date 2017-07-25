@@ -68,39 +68,19 @@ def makeWebhookResult(req):
         "data" : {
             "facebook" : {
               "attachment": {
-                "type": "template",
-                "payload": {
-                  "template_type": "list",
-                  "top_element_style": "compact",
-                  "elements": [
-                    {
-                      "title": tituloAtractivo,
-                      "image_url": imagenAtractivo,
-                      "subtitle": descripcionAtractivo,
-                      "buttons": [
-                        {
-                          "title": 'title',
-                          "type": 'web_url',
-                          "url": 'http://www.google.com.au',
-                          "webview_height_ratio": 'compact'
-                        }
-                      ]
-                    },
-                    {
-                      "title": 'title',
-                      "image_url": null,
-                      "subtitle": 'subtitle subtitle subtitle',
-                      "buttons": [
-                        {
-                          "title": 'title',
-                          "type": 'web_url',
-                          "url": 'http://www.google.com.au',
-                          "webview_height_ratio": 'compact'
-                        }
-                      ]
-                    }
-                  ]
-                }
+                  "attachment" : {
+                      "type" : "template",
+                      "payload" : {
+                          "template_type" : "generic",
+                         "elements" : [
+                              {
+                                  "title" : tituloAtractivo,
+                                  "image_url" : imagenAtractivo,
+                                  "subtitle": descripcionAtractivo,
+                              }
+                         ]
+                     }
+                  }
               }
             }
         },
