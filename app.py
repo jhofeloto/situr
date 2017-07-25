@@ -39,12 +39,12 @@ def webhook():
 def makeWebhookResult(req):
     if req.get("result").get("action") != "buscarAtractivos":
         return {}
-    result = req.get("result")#invocar el result del json 
+    result = req.get("result")#invocar el result del json
     parameters = result.get("parameters")#invocar el parameters dentro de result
     atractivos = parameters.get("atractivos")#DATO TRAÍDO DE API.AI - ATRACTIVOS
-    
+
     #URL BASE CONSULTA ATRACTIVOS JSON
-    baseUrlAtractivos = "http://situr.boyaca.gov.co/wp-json/wp/v2/atractivo_turistico?search="#URL Base Atractivos
+    baseUrlAtractivos = "http://situr.boyaca.gov.co/wp-json/wp/v2/atractivo_turistico?orderby=relevance&offset=0&search="#URL Base Atractivos
     baseUrlImgAtract = "http://www.situr.boyaca.gov.co/wp-json/wp/v2/media/"#URL Base Imagenes Atractivos
     retirarEspacios = atractivos.replace(" ",  "%20")#Retirar Espacios Atractivos
 
@@ -71,7 +71,7 @@ def makeWebhookResult(req):
                     "type" : "template",
                     "payload" : {
                         "template_type" : "generic",
-                       "elements" : [ 
+                       "elements" : [
                             {
                                 "title" : tituloAtractivo,
                                 "image_url" : imagenAtractivo,
@@ -85,7 +85,7 @@ def makeWebhookResult(req):
  #       "contextOut": [{"name":"desdepython", "lifespan":2, "parameters":{"slug":urlAtractivo}}],
         "source": "apiai-situr3"
     }
-    
+
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
 
