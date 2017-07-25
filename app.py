@@ -67,35 +67,35 @@ def makeWebhookResult(req):
         "displayText": speech,
         "data" : {
             "facebook" : {
-              attachment: {
-                type: "template",
-                payload: {
-                  template_type: "list",
-                  top_element_style: "compact",
-                  elements: [
+              "attachment": {
+                "type": "template",
+                "payload": {
+                  "template_type": "list",
+                  "top_element_style": "compact",
+                  "elements": [
                     {
-                      title: tituloAtractivo,
-                      image_url: imagenAtractivo,
-                      subtitle: descripcionAtractivo,
-                      buttons: [
+                      "title": tituloAtractivo,
+                      "image_url": imagenAtractivo,
+                      "subtitle": descripcionAtractivo,
+                      "buttons": [
                         {
-                          title: 'title',
-                          type: 'web_url',
-                          url: 'http://www.google.com.au',
-                          webview_height_ratio: 'compact'
+                          "title": 'title',
+                          "type": 'web_url',
+                          "url": 'http://www.google.com.au',
+                          "webview_height_ratio": 'compact'
                         }
                       ]
                     },
                     {
-                      title: 'title',
-                      image_url: null,
-                      subtitle: 'subtitle subtitle subtitle',
-                      buttons: [
+                      "title": 'title',
+                      "image_url": null,
+                      "subtitle": 'subtitle subtitle subtitle',
+                      "buttons": [
                         {
-                          title: 'title',
-                          type: 'web_url',
-                          url: 'http://www.google.com.au',
-                          webview_height_ratio: 'compact'
+                          "title": 'title',
+                          "type": 'web_url',
+                          "url": 'http://www.google.com.au',
+                          "webview_height_ratio": 'compact'
                         }
                       ]
                     }
