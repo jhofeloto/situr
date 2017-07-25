@@ -71,20 +71,21 @@ def makeWebhookResult(req):
                     "type" : "template",
                     "payload" : {
                         "template_type" : "generic",
-                       "elements" : [
+                       "elements" :[
                             {
                                 "title" : tituloAtractivo,
                                 "image_url" : imagenAtractivo,
                                 "subtitle": descripcionAtractivo,
                             },
-                            "buttons":^
+                            "buttons":[
                                 {
                                 "type":"web_url",
                                 "url":"http://situr.boyaca.gov.co",
                                 "title":"Ver website"
                                 }
-                       ]
-                   }
+                            ]
+                       }
+                   ]
                 }
             }
         },
