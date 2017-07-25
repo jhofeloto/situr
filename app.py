@@ -76,7 +76,13 @@ def makeWebhookResult(req):
                                 "title" : tituloAtractivo,
                                 "image_url" : imagenAtractivo,
                                 "subtitle": descripcionAtractivo,
-                            }
+                            },
+                            "buttons":^
+                                {
+                                "type":"web_url",
+                                "url":"http://situr.boyaca.gov.co",
+                                "title":"Ver website"
+                                }
                        ]
                    }
                 }
