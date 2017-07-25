@@ -77,11 +77,11 @@ def makeWebhookResult(req):
                                 "image_url" : imagenAtractivo,
                                 "subtitle": descripcionAtractivo,
                                 "buttons": [
-                                {
-                                    "type": "web_url",
-                                    "url": "http:situr.boyaca.gov.co",
-                                    "title": "Ver detalles"
-                                }
+                                    {
+                                        "type": "web_url",
+                                        "url": "http:situr.boyaca.gov.co",
+                                        "title": "Ver detalles"
+                                    }
                                 ]
                             }
                        ]
