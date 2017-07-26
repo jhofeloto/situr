@@ -109,7 +109,6 @@ def makeWebhookResult(req):
         "source": "apiai-situr3"
     }
 <<<<<<< HEAD
-
 =======
 >>>>>>> parent of 50ae2bc... Json
 
