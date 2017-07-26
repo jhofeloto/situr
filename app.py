@@ -84,6 +84,16 @@ def makeWebhookResult(req):
                                             "type":"web_url",
                                             "url": "http://situr.boyaca.gov.co",
                                             "title": "Ver"
+                                        },
+                                        {
+                                             "type":"web_url",
+                                            "url": "http://situr.boyaca.gov.co",
+                                            "title": "Ver2"
+                                        },
+                                        {
+                                              "type":"web_url",
+                                            "url": "http://situr.boyaca.gov.co",
+                                            "title": "Ver3"
                                         }
                                     ]
                                 }
