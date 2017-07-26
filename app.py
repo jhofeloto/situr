@@ -111,9 +111,9 @@ def makeWebhookResult(req):
                                     ]
                                 },
                                 {
-                                    "title": tituloAtractivo1,
-                                    "image_url": imagenAtractivo1,
-                                    "subtitle": descripcionAtractivo1,
+                                    "title": "tituloAtractivo1",
+                                    "image_url": "https://www.moovrika.com/ext/makeimg.php?tbl=movies&id=15666&img=1&type=image&movie=Smurfs+The+Lost+Village&fs=400",
+                                    "subtitle": "descripcionAtractivo1",
                                     "default_action": {
                                         "type": "web_url",
                                         "url": "https://www.moovrika.com/m/4167",
