@@ -47,9 +47,9 @@ def makeWebhookResult(req):
     baseUrlAtractivos = "http://situr.boyaca.gov.co/wp-json/wp/v2/atractivo_turistico?offset=0&search="#URL Base Atractivos
     baseUrlImgAtract = "http://www.situr.boyaca.gov.co/wp-json/wp/v2/media/"#URL Base Imagenes Atractivos
     retirarEspacios = atractivos.replace(" ",  "%20")#Retirar Espacios Atractivos
-    i = i+1
+    
     leerAtractivo = json.loads(urlopen(baseUrlAtractivos + retirarEspacios).read())
-    tituloAtractivo = leerAtractivo[0]['title']['rendered']+i
+    tituloAtractivo = leerAtractivo[0]['title']['rendered']
     descripcionAtractivo = re.sub("<.*?>", "", leerAtractivo[0]['excerpt']['rendered'])
     urlAtractivo = leerAtractivo[0].get('link')
     idImagenAtractivo = str(leerAtractivo[0]['featured_media'])
