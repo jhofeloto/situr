@@ -50,6 +50,7 @@ def makeWebhookResult(req):
 
     leerAtractivo = json.loads(urlopen(baseUrlAtractivos + retirarEspacios).read())
     tituloAtractivo = leerAtractivo[0]['title']['rendered']
+    tituloAtractivo1 = leerAtractivo[1]['title']['rendered']
     descripcionAtractivo = re.sub("<.*?>", "", leerAtractivo[0]['excerpt']['rendered'])
     urlAtractivo = leerAtractivo[0].get('link')
     idImagenAtractivo = str(leerAtractivo[0]['featured_media'])
@@ -98,7 +99,7 @@ def makeWebhookResult(req):
                                     ]
                                 },
                                 {
-                                    "title": "Resident Evil: The Final Chapter (2017)",
+                                    "title": tituloAtractivo1,
                                     "image_url": "https://www.moovrika.com/ext/makeimg.php?tbl=movies&id=4167&img=1&type=image&movie=Resident+Evil+The+Final+Chapter&fs=400",
                                     "subtitle": "Resident Evil: The Final Chapter is an upcoming science fiction action horror film written and directed by Paul W. S. Anderson. It is the sequel to Resident Evil: Retribution (2012), and will be the sixth and final installment in the Resident Evil film series, which is very loosely based on the Capcom survival horror video game series Resident Evil.",
                                     "default_action": {
