@@ -174,6 +174,7 @@ def makeWebhookResult(req):
         "source": "apiai-situr3"
     }
 
+
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
 
