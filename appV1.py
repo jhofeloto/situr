@@ -53,49 +53,10 @@ def makeWebhookResult(req):
     descripcionAtractivo = re.sub("<.*?>", "", leerAtractivo[0]['excerpt']['rendered'])
     urlAtractivo = leerAtractivo[0].get('link')
     idImagenAtractivo = str(leerAtractivo[0]['featured_media'])
+
     leerImagenAtr = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo).read())
     imagenAtractivo = leerImagenAtr['media_details']['sizes']['medium']['source_url']
 
-    tituloAtractivo1 = leerAtractivo[1]['title']['rendered']
-    descripcionAtractivo1 = re.sub("<.*?>", "", leerAtractivo[1]['excerpt']['rendered'])
-    idImagenAtractivo1 = str(leerAtractivo[1]['featured_media'])
-    leerImagenAtr1 = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo1).read())
-    imagenAtractivo1 = leerImagenAtr1['media_details']['sizes']['medium']['source_url']
-
-
-    tituloAtractivo2 = leerAtractivo[2]['title']['rendered']
-    descripcionAtractivo2 = re.sub("<.*?>", "", leerAtractivo[2]['excerpt']['rendered'])
-    idImagenAtractivo2 = str(leerAtractivo[2]['featured_media'])
-    leerImagenAtr2 = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo2).read())
-    imagenAtractivo2 = leerImagenAtr2['media_details']['sizes']['medium']['source_url']
-
-    tituloAtractivo3 = leerAtractivo[3]['title']['rendered']
-    descripcionAtractivo3 = re.sub("<.*?>", "", leerAtractivo[3]['excerpt']['rendered'])
-    idImagenAtractivo3 = str(leerAtractivo[3]['featured_media'])
-    leerImagenAtr3 = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo3).read())
-    imagenAtractivo3 = leerImagenAtr3['media_details']['sizes']['medium']['source_url']
-
-    tituloAtractivo4 = leerAtractivo[4]['title']['rendered']
-    descripcionAtractivo4 = re.sub("<.*?>", "", leerAtractivo[4]['excerpt']['rendered'])
-    idImagenAtractivo4 = str(leerAtractivo[4]['featured_media'])
-    leerImagenAtr4 = json.loads(urlopen(baseUrlImgAtract + idImagenAtractivo4).read())
-    imagenAtractivo4 = leerImagenAtr4['media_details']['sizes']['medium']['source_url']
-
-
-
-    #URL BASE CONSULTA ATRACTIVOS JSON 2da posicion
-#    baseUrlAtractivos1 = "http://situr.boyaca.gov.co/wp-json/wp/v2/atractivo_turistico?offset=1&search="#URL Base Atractivos
-#    baseUrlImgAtract1 = "http://www.situr.boyaca.gov.co/wp-json/wp/v2/media/"#URL Base Imagenes Atractivos
-#    retirarEspacios1 = atractivos.replace(" ",  "%20")#Retirar Espacios Atractivos
-
-#    leerAtractivo1 = json.loads(urlopen(baseUrlAtractivos1 + retirarEspacios1).read())
-#    tituloAtractivo1 = leerAtractivo1[0]['title']['rendered']
-#    descripcionAtractivo1 = re.sub("<.*?>", "", leerAtractivo1[0]['excerpt']['rendered'])
-#    urlAtractivo1 = leerAtractivo1[0].get('link')
-#    idImagenAtractivo1 = str(leerAtractivo1[0]['featured_media'])
-
-#    leerImagenAtr1 = json.loads(urlopen(baseUrlImgAtract1 + idImagenAtractivo1).read())
-#    imagenAtractivo1 = leerImagenAtr1['media_details']['sizes']['medium']['source_url']
 
 
     speech = "El atractivo: " + tituloAtractivo + ". Descripción:" + descripcionAtractivo + "    y la url de la imagen es: " + imagenAtractivo
@@ -118,7 +79,6 @@ def makeWebhookResult(req):
                                     "title" : tituloAtractivo,
                                     "image_url" : imagenAtractivo,
                                     "subtitle": descripcionAtractivo,
-,
                                     "buttons":  [
                                         {
                                             "type":"web_url",
@@ -138,9 +98,9 @@ def makeWebhookResult(req):
                                     ]
                                 },
                                 {
-                                    "title": tituloAtractivo1,
-                                    "image_url": imagenAtractivo1,
-                                    "subtitle": descripcionAtractivo1,
+                                    "title": "Resident Evil: The Final Chapter (2017)",
+                                    "image_url": "https://www.moovrika.com/ext/makeimg.php?tbl=movies&id=4167&img=1&type=image&movie=Resident+Evil+The+Final+Chapter&fs=400",
+                                    "subtitle": "Resident Evil: The Final Chapter is an upcoming science fiction action horror film written and directed by Paul W. S. Anderson. It is the sequel to Resident Evil: Retribution (2012), and will be the sixth and final installment in the Resident Evil film series, which is very loosely based on the Capcom survival horror video game series Resident Evil.",
                                     "default_action": {
                                         "type": "web_url",
                                         "url": "https://www.moovrika.com/m/4167",
