@@ -50,6 +50,7 @@ def makeWebhookResult(req):
 
     leerAtractivo = json.loads(urlopen(baseUrlAtractivos + retirarEspacios).read())
     tituloAtractivo = leerAtractivo[0]['title']['rendered']
+    tituloAtractivo1 = leerAtractivo[1]['title']['rendered']
     descripcionAtractivo = re.sub("<.*?>", "", leerAtractivo[0]['excerpt']['rendered'])
     urlAtractivo = leerAtractivo[0].get('link')
     idImagenAtractivo = str(leerAtractivo[0]['featured_media'])
@@ -91,7 +92,7 @@ def makeWebhookResult(req):
                             "template_type" : "generic",
                            "elements" : [
                                 {
-                                    "title" : leerAtractivo[0]['title']['rendered'],
+                                    "title" : tituloAtractivo,
                                     "image_url" : imagenAtractivo,
                                     "subtitle": descripcionAtractivo,
 ,
@@ -114,7 +115,7 @@ def makeWebhookResult(req):
                                     ]
                                 },
                                 {
-                                    "title": leerAtractivo[0]['title']['rendered'],
+                                    "title": tituloAtractivo1,
                                     "image_url": imagenAtractivo,
                                     "subtitle": descripcionAtractivo,
                                     "default_action": {
