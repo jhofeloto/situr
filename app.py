@@ -138,9 +138,9 @@ def makeWebhookResult(req):
                                     ]
                                 },
                                 {
-                                    "title": tituloAtractivo1,
-                                    "image_url": imagenAtractivo1,
-                                    "subtitle": descripcionAtractivo1,
+                                    "title": tituloAtractivo2,
+                                    "image_url": imagenAtractivo2,
+                                    "subtitle": descripcionAtractivo2,
                                     "default_action": {
                                         "type": "web_url",
                                         "url": "https://www.moovrika.com/m/4167",
