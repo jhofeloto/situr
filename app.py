@@ -50,7 +50,6 @@ def makeWebhookResult(req):
 
     leerAtractivo = json.loads(urlopen(baseUrlAtractivos + retirarEspacios).read())
     tituloAtractivo = leerAtractivo[0]['title']['rendered']
-    tituloAtractivo1 = leerAtractivo[1]['title']['rendered']
     descripcionAtractivo = re.sub("<.*?>", "", leerAtractivo[0]['excerpt']['rendered'])
     urlAtractivo = leerAtractivo[0].get('link')
     idImagenAtractivo = str(leerAtractivo[0]['featured_media'])
